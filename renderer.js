@@ -8,3 +8,11 @@ ipcRenderer.on('git-status', (event, status) => {
 document.getElementById('select-repo').addEventListener('click', () => {
     ipcRenderer.send('select-repo');
 });
+
+document.getElementById('view-log').addEventListener('click', () => {
+    ipcRenderer.send('view-log');
+});
+
+ipcRenderer.on('git-log', (event, log) => {
+    document.getElementById('git-log').textContent = log;
+});

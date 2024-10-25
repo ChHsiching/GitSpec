@@ -1,0 +1,37 @@
+@font-face {
+    font-family: 'Scandia';
+    src: local('Scandia Regular'), local('Scandia-Regular'),
+    url('./fonts/Scandia/Scandia-Regular.woff2') format('woff2'),
+    url('./fonts/Scandia/Scandia-Regular.woff') format('woff'),
+    url('./fonts/Scandia/Scandia-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Scandia';
+    src: local('Scandia Bold'), local('Scandia-Bold'),
+        url('./fonts/Scandia/Scandia-Bold.woff2') format('woff2'),
+        url('./fonts/Scandia/Scandia-Bold.woff') format('woff'),
+        url('./fonts/Scandia/Scandia-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: bold;
+}
+
+@font-face {
+    font-family: 'JetBrainsMono';
+    src: local('JetBrainsMono Regular'), local('JetBrainsMono-Regular'),
+        url('./fonts/JetBrainsMono/webfonts/JetBrainsMono-Regular.woff2') format('woff2'),
+        url('./fonts/JetBrainsMono/ttf/JetBrainsMono-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'JetBrainsMono';
+    src: local('JetBrainsMono Bold'), local('JetBrainsMono-Bold'),
+        url('./fonts/JetBrainsMono/webfonts/JetBrainsMono-Bold.woff2') format('woff2'),
+        url('./fonts/JetBrainsMono/ttf/JetBrainsMono-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: bold;
+}

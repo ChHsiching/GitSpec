@@ -1,7 +1,8 @@
 // Modules to control application life and create native browser window
 const { app, BrowserWindow, dialog, ipcMain  } = require('electron')
 const { exec } = require('child_process');
-const path = require('node:path')
+const path = require('node:path');
+const { stderr } = require('node:process');
 
 let currentDir = '';
 
@@ -59,7 +60,20 @@ function getGitStatus(event) {
         }
         event.sender.send('git-status', stdout); // 修改为使用 event.sender
     });
-}
+};
+
+
+// Listen to view commit history events
+ipcMain.on('view-log', (event) => {
+    exec('git log --oneline', { cwd: currentDir }, (error, stdout, stderr) => {
+        if (error) {
+            console.error(`exec error: ${error}`);
+            event.sender.send('git-log', `Error: ${stderr}`);
+            return;
+        }
+        event.sender.send('git-log', stdout);
+    });
+});
 
 
 
